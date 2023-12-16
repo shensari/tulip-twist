@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimi's Flower Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.webp);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 3%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #f8f8f8;
+            box-shadow: 0 2px 4px rgba(248, 244, 244, 0.1);
+        }
+
+        .site-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .site-menu ul li {
+            margin-right: 20px;
+            transition: color 0.3s ease;
+            padding: 6px 15px;
+        }
+
+        .site-menu ul li:hover {
+            color: gold;
+            background: linear-gradient(45deg, red, rgb(245, 14, 122));
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        .banner {
+            position: relative;
+        }
+
+        .banner-img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .text-banner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #0a0a0a;
+            width: 100%;
+            text-align: center;
+            color: white;
+
+        }
+
+        article {
+            margin-top: 20px;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .deals-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            color: #fff;
+        }
+
+
+        .deals-list li {
+            flex: 0 0 48%;
+            margin-bottom: 20px;
+            margin-right: 2%;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 5px;
+            box-sizing: border-box;
+            color: #0a0a0a;
+            background-color:mistyrose;
+            border-radius: 3%;
+        }
+
+        .deals-list img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .deals-list img:hover{
+            transform: scale(1.1);
+        cursor: pointer;
+        }
+
+        .occasion-list {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-right: 2%;
+        }
+
+
+        .occasion-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .occasion-list ul li {
+            flex: 0 0 23%;
+            margin-bottom: 10px;
+            margin-right: 2%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .occasion-list ul li:hover {
+            background: linear-gradient(45deg, red, rgb(245, 14, 122));
+        }
+
+        .occasion-list ul li a {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: #0a0a0a;
+        }
+
+        .occasion-list ul li img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            background-color: pink;
+        }
+
+        .occasion-list ul li a:hover img {
+            background-color: #ddd;
+
+        }
+
+        .company-info {
+            margin-top: 20px;
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .company-info h6 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .company-info p {
+            margin-bottom: 5px;
+        }
+
+        .company-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .company-info ul li {
+            flex: 0 0 48%;
+            margin-bottom: 5px;
+            margin-right: 2%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <h1 style="margin-left: 3px;">TULIP TWIST</h1>
+            <nav class="site-menu">
+                <ul>
+                    <li><a href="#"><b>Home</b></a></li>
+                    <li><a href="#deals-content"><b>Today's Flowers</b></a></li>
+                    <li><a href="#occasions"><b>Occasions</b></a></li>
+                    <li><a href="#contact-container"><b>Contact Us</b></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="banner">
+                <img src="https://unsplash.it/1700/600?image=976" alt="" class="banner-img" />
+                <div class="text-banner">
+                    <h2>"The finest flowers for the finest moments"</h2>
+                </div>
+            </div>
+
+            <article>
+                <section id="deals-content">
+                    <h2 class="section-title">Special Deals</h2>
+                    <div class="wrapper">
+                        <ul class="deals-list">
+                            <li>
+                                <h2 class="deals-title">January</h2>
+                                <p class="deals-text"><strong>Greigii Tulips:</strong>  These are reliably perennial Tulips with lovely purple-mottled or purple-striped foliage that is attractive before the flowers open and remains so even after they are gone. The chalice-shaped flowers generally open wide to reveal the interior colors. These exceptionally brilliant Tulips are much loved in Europe for creating vivid but compact displays. Early to midseason bloomers, these are perfect companions for midseason Daffodils, Anemones, and Hyacinths. Greigii Tulips are good for bedding and for forcing. 
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="212012.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">February</h2>
+                                <p class="deals-text"><strong>"French" Single Late Tulips:</strong> We've separated these robust Tulips from the other single lates because they tend to grow taller. They are very strong perennials and have distinctively oblong-shaped flowers, which are long-stemmed and long-lasting. As you might imagine, they're great for cutting. Because the bulbs mature earlier, they also perform well in warmer climates.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="254202.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">March</h2>
+                                <p class="deals-text"> <strong>Single Late Tulips</strong>These late-blooming Tulips are good for bedding and cutting. Try them under a flowering Crabapple.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="210032.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">April</h2>
+                                <p class="deals-text"><strong>Darwin Hybrid Tulips:</strong>The Darwin Hybrids produce long-lasting flowers on strong stems that are perfect for cutting, and the brilliant colors of these very popular Tulips show up beautifully in the landscape. Darwin Hybrids usually perform well for several years, making them among the best perennial Tulips. They bloom in midseason, along with all but the earliest Daffodils, and they force well. Wind and weather resistant.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="242412.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">May</h2>
+                                <p class="deals-text"> <strong>Triumph Tulips</strong>
+                                    The Triumphs make up the largest group of Tulips and the one that offers the widest range of colors. All have medium-length stems. Triumphs are best used for forcing and short-term bedding. They are also good in containers, if protected from freezing in areas colder than Zone 7.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="977311.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">June</h2>
+                                <p class="deals-text"><strong>Double Tulips:</strong>Long-lasting, semidouble to double flowers that bear a striking resemblance to double Peonies. All Double Tulips are good for bedding, and some are excellent candidates for forcing. Early varieties bloom with Daffodils, Muscari, and Hyacinths. The shorter, earlier varieties are also great in pots, planters, and window boxes (if protected from freezing in Zones colder than 7).
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="242927.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">July</h2>
+                                <p class="deals-text"> <strong>Fringed Tulips:</strong>Also know as "Crispa" Tulips. The flower petals are edged with very finely cut fringes. Fringed Tulips make unusual bedding plants. Midseason to late blooming.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="230800.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">August</h2>
+                                <p class="deals-text"> <strong>Fosteriana Tulips:</strong>The Fosterianas have exceptionally large, long flowers in rich colors that create vivid displays. This group is very popular for landscaping in Europe but not as familiar in the United States. It's worth the effort to get to know these Tulips because they are among the best for perennializing and naturalizing, as well as for forcing. They bloom early with Daffodils, whose warm yellows and oranges harmonize especially well with the hot-colored selections in this group. Try underplanting with blue Muscari or purple Pansies for maximum contrast.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="211025.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">September</h2>
+                                <p class="deals-text"><strong>Greigii Tulips</strong> These are reliably perennial Tulips with lovely purple-mottled or purple-striped foliage that is attractive before the flowers open and remains so even after they are gone. The chalice-shaped flowers generally open wide to reveal the interior colors. These exceptionally brilliant Tulips are much loved in Europe for creating vivid but compact displays. Early to midseason bloomers, these are perfect companions for midseason Daffodils, Anemones, and Hyacinths. Greigii Tulips are good for bedding and for forcing.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="232769.jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">October</h2>
+                                <p class="deals-text"> <strong>Viridiflora Tulips:</strong>These Tulips are often considered a novelty because they are unusual, but connoisseurs treasure their refined beauty. As the name suggests, their flowers are green, often in combination with a second, complementary color. Both varieties offered are long blooming and look simply spetacular in flower arrangements. Late blooming.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="280102 (1).jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">November</h2>
+                                <p class="deals-text"> <strong>Single Early Tulips:</strong>These single-flowered cultivars are among the earliest Tulips to bloom, often with Daffodils. Because they open in cooler weather, the flowers usually last longer than those of later Tulips. They are perfect complements for Hyacinths, Violas, Forget-me-nots, and Pansies. Excellent for forcing, Single Early Tulips are also great for bedding and planting in containers (if pots are protected from freezing in Zones colder than 7).
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="210102 (1).jpg" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="deals-title">December</h2>
+                                <p class="deals-text"><strong>Lily-Flowered Tulips:</strong>Very graceful and elegant flowers with pointed, reflexed petals, creating a distinctive profile. Lily-Flowered Tulips are late bloomers excellent for bedding and cutting.
+                                </p>
+                                $20.99
+                                <button style="background-color: lightskyblue;"><a
+                                    href="#" style="color: #0a0a0a;"> Buy now.</a></button>
+                                <img src="261402 (1).jpg" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="occasions">
+                    <h2 class="section-title">Occasions</h2>
+                    <div class="wrapper">
+                        <div class="occasion-list">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Anniversary</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="occasion-list">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> monthsary</a></li>
+                                <li><a href="#"><i class="fa fa- female" aria-hidden="true"></i> weddings</a></li>
+                                <li><a href="#"><i class="fa fa-gift" aria-hidden="true"></i> birthdays</a></li>
+                                <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>valentines</a></li>
+                                <li><a href="#"><i class="fa fa-trophy" aria-hidden="true"></i> victory</a></li>
+                                <li><a href="#"><i class="fa fa-medkit" aria-hidden="true"></i> Get Well</a></li>
+                                <li><a href="#"><i class="fa fa-puzzle-piece" aria-hidden="true"></i> ordinary days</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="company-info">
+                    <h2><b>Company: </b></h2>
+                    <p>Shenly's Flower Shop</p>
+                    <p>This website is made by Shenly Ann Sari</p>
+                    <p>Copyright 2023</p>
+                    <ul>
+                        <li>Products</li>
+                        <li>About Us</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>
